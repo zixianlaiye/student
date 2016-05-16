@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="demo.css">
+    <script src="mydate.js"></script>
+</head>
+<body>
+<div id="contant">
+    <form method="post">
+        <p class="col">姓名：<input type="text"></p>
+        <p class="col">性别：<input type="radio" name="sex" checked value="male">男&nbsp;&nbsp;<input type="radio" name="sex" value="female">女</p>
+        <p class="col">学院：<input type="text"></p>
+        <p class="col">专业：<input type="text"></p>
+        <p class="col">班级：<input type="text"></p>
+        <p class="col">入学时间：<input type="text" name="startTime" onfocus="MyCalendar.SetDate(this);"></p>
+        <p class="col">学生类型：<input type="radio" name="stuType" checked value="本科生">本科生&nbsp;&nbsp;<input type="radio" name="stuType" value="研究生">研究生</p>
+        <p class="col">学号：<input type="text"></p>
+        <p class="col"><button id="btn" value="submit">提交</button></p>
+    </form>
+</div>
+</body>
+</html>

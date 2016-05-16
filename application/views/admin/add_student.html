@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增学生信息</title>
+    <link rel="stylesheet" href="<?php echo base_url().'style/admin/css/demo.css'?>">
+    <script src="<?php echo base_url().'style/admin/js/mydate.js'?>"></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+<script type="text/javascript">
+    $.validator.setDefaults({
+        submitHandler: function() {
+            alert("提交事件!");
+        }
+    });
+
+    $().ready(function(){
+        $("#signupForm").validate({
+            rules:{
+                name:"required"
+
+
+                    },
+            messages:{
+                name:"请输入姓名"
+            }
+
+
+        });
+
+
+    }
+
+
+    )
+</script>
+
+
+</head>
+<body>
+
+
+    <div id="contant">
+        <form method="post" id="signupForm"  action="<?php echo site_url().'/Admin/add_student'?>">
+            <p class="col"><label for="name">姓名：</label><input id="name" type="text" name="name"></p>
+            <p class="col">性别：<input type="radio" name="sex" checked value="男">男&nbsp;&nbsp;<input type="radio" name="sex" value="女">女</p>
+            <p class="col">学院：<input type="text" name="college"></p>
+            <p class="col">专业：<input type="text" name="major"></p>
+            <p class="col">班级：<input type="text" name="class"></p>
+            <p class="col">入学时间：<input type="text" name="time" onfocus="MyCalendar.SetDate(this);"></p>
+            <p class="col">学生类型：<input type="radio" name="type" checked value="本科生">本科生&nbsp;&nbsp;<input type="radio" name="type" value="研究生">研究生</p>
+            <p class="col">学号：<input type="text" name="number"></p>
+            <p class="col"><button id="btn" value="submit">提交</button></p>
+        </form>
+    </div>
+
+
+
+</body>
+</html>

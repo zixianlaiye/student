@@ -1,0 +1,17 @@
+#contant{
+    width: 500px;
+    margin: 0 auto;
+}
+#contant .col{
+    line-height: 2.5em;
+}
+#contant #btn{
+    border: none;
+    width: 54px;
+    height: 43px;
+    background: url(ico.gif) no-repeat 0 -100px;
+    color: #fff;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    margin-left: 76px;
+}

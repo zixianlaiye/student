@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<link rel="stylesheet" href="<?php echo base_url().'style/admin/css/demo.css'?>">
+<script src="<?php echo base_url().'style/admin/js/mydate.js'?>"></script>
+</head>
+<body>
+
+<div id="contant">
+    <form method="post" action="<?php echo site_url().'/Admin/edit_action'?>">
+        <p class="col">姓名：<input type="text" name="name" value="<?php echo $student[0]['name']?>"  ></p>
+        <p class="col">性别：<input type="radio" name="sex"  value="男"  <?php if($student[0]['sex']=='男')echo 'checked'?>>男&nbsp;&nbsp;<input type="radio" name="sex" value="女" <?php if($student[0]['sex']=='女')echo 'checked'?>>女</p>
+        <p class="col">学院：<input type="text" name="college" value="<?php echo $student[0]['college']?>"></p>
+        <p class="col">专业：<input type="text" name="major" value="<?php echo $student[0]['major']?>"></p>
+        <p class="col">班级：<input type="text" name="class" value="<?php echo $student[0]['class']?>" ></p>
+        <p class="col">入学时间：<input type="text" name="time" value="<?php echo $student[0]['time']?>" onfocus="MyCalendar.SetDate(this);"></p>
+        <p class="col">学生类型：<input type="radio" name="type" <?php if($student[0]['type']=='本科生')echo 'checked'?> value="本科生">本科生&nbsp;&nbsp;<input type="radio" name="type" <?php if($student[0]['type']=='研究生')echo 'checked'?> value="研究生">研究生</p>
+        <p class="col">学号：<input type="text" name="number" value="<?php echo $student[0]['number']?>"></p>
+        <input type="hidden" name="uid" value="<?php echo $student[0]['uid']?>">
+        <p class="col"><button id="btn" value="submit">确认更新</button></p>
+    </form>
+</div>
+</form>
+<div>
+<form method="post" action="<?php echo site_url().'/Admin/Delete_student'?>" >
+    <input type="hidden" name="uid" value="<?php echo $student[0]['uid']?>">
+    若要删除该同学信息，请点击此按钮：<button id="button" value="submit">删除</button></p>
+</form>
+</div>
+
+
+
+</body>
+</html>

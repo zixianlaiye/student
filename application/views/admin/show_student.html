@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="<?php echo base_url().'style/admin/css/demo.css'?>">
+
+    <script src="<?php echo base_url().'style/admin/js/mydate.js'?>"></script>
+</head>
+<body>
+
+<div id="content">
+    <form action="<?php echo site_url().'/Admin/copy'?>" >
+        <p class="col">姓名：<?php echo $student[0]['name'] ?></p>
+        <p class="col">性别：<?php echo $student[0]['sex'] ?></p>
+        <p class="col">学院：<?php echo $student[0]['college'] ?></p>
+        <p class="col">专业：<?php echo $student[0]['major'] ?></p>
+        <p class="col">班级：<?php echo $student[0]['class'] ?></p>
+        <p class="col">入学时间：<?php echo $student[0]['time'] ?></p>
+        <p class="col">学生类型：<?php echo $student[0]['type'] ?></p>
+        <p class="col">学号：<?php echo $student[0]['number'] ?></p>
+
+        <p class="col"><button id="btn" value="submit">返回</button></p>
+    </form>
+</div>
+
+
+</body>
+</html>
